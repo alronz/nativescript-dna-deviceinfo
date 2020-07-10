@@ -252,11 +252,6 @@ export class DeviceInfo {
     return NSTimeZone.localTimeZone.name;
   }
 
-  static userAgent(): string {
-    const webView = UIWebView.alloc().initWithFrame(CGRectZero);
-    return webView.stringByEvaluatingJavaScriptFromString("navigator.userAgent");
-  }
-
   static appName(): string {
     return NSBundle.mainBundle.objectForInfoDictionaryKey("CFBundleDisplayName");
   }

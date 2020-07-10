@@ -143,15 +143,6 @@ export class DeviceInfo {
     return java.util.TimeZone.getDefault().getID();
   }
 
-  static userAgent(): string {
-    try {
-      return android.webkit.WebSettings.getDefaultUserAgent(Android.context);
-    } catch (error) {
-      console.log(<Error>error.message);
-    }
-    return "";
-  }
-
   static appName(): string {
     const ctx = <ContextType>Android.context;
     return ctx.getApplicationInfo().loadLabel(ctx.getPackageManager());

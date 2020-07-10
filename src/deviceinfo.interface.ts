@@ -108,9 +108,6 @@ export interface DeviceInfoInterface {
   // Returns the time zone of a device.
   timezone(): string;
 
-  // Returns the user agent string of a device.
-  userAgent(): string;
-
   // Returns an app name.
   appName(): string;
 
